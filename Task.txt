@@ -1,0 +1,293 @@
+Buatkan saya file PRD.md dari aplikasi flutter saya dengan dashboard admin web dan aplikasi android untuk siswa. database gunakan supabase. Assalamu'alaikum warahmatullahi wabarakatuh, Pak. 
+
+Mohon izin bertanya terkait pembuatan website/aplikasi pembelajaran yang pernah Bapak buat, apakah Bapak berkenan membantu proses pembuatannya?
+
+Adapun fitur yang saya butuhkan dalam aplikasi tersebut, yaitu:
+
+1. Materi pembelajaran berbasis literasi yang dapat dibaca oleh siswa.
+2. Video pembelajaran yang dapat diakses secara langsung oleh siswa.
+3. Presensi (absensi) online yang hanya dapat dilakukan pada jam mata pelajaran yang saya ampu sesuai jadwal pembelajaran.
+4. Ujian online berbasis CBT yang terdiri atas:
+   - Soal pilihan ganda.
+   - Soal uraian singkat (essay).
+   - Pengaturan waktu pengerjaan ujian.
+   - Rekap dan hasil nilai yang dapat dilihat oleh guru.
+5. Data absensi dan hasil ujian siswa dapat direkap secara otomatis.
+
+Apakah fitur-fitur tersebut memungkinkan untuk dibuat, Pak? Kira-kira bagaimana konsep dan mekanisme pembuatannya? Mohon arahan dan informasinya. Terima kasih sebelumnya, Pak.
+
+Wassalamu'alaikum warahmatullahi wabarakatuh. https://play.google.com/store/apps/details?id=com.cbt.sidigs.karna Aplikasi saya dulu kayak gini 
+
+Tapi tampilannya bisa dua dia ini Pak. Pilihan gurunya;
+- dia bisa input soal manual seperti yang dicontoh ini di link playstore
+- yg kedua, gurunya bisa hanya upload soal bentuk PDF... untuk jika gurunya repot dan nggak mau input satu persatu... jadi cuma hanya upload PDF dan tambahkan kunci soal. Sama kalau untuk yang websitenya itu ada super admin login, login guru, sama login siswa jika siswanya nggak punya HP misalnya... Misal siswa nggak punya HP Dia bisa ujian di laboratorium komputer menggunakan perangkat laptop atau komputer jadi ada login untuk siswanya di website. Betul sekali, Pak. Bahkan menurut saya akan lebih baik apabila konsepnya dibuat hierarki hak akses. Artinya, apa yang bisa dilakukan Guru juga bisa dilakukan oleh Admin dan Super Admin, tetapi Guru hanya dibatasi pada data yang menjadi tanggung jawabnya.
+
+Sebagai contoh:
+
+LEVEL 1 : SUPER ADMIN
+
+Memiliki akses 100%.
+
+Hak akses:
+
+Mengelola seluruh data sekolah.
+
+Mengelola seluruh akun Admin.
+
+Mengelola seluruh akun Guru.
+
+Mengelola seluruh akun Siswa.
+
+Monitoring seluruh aktivitas pengguna.
+
+Backup dan Restore Database.
+
+Pengaturan aplikasi dan website.
+
+Melihat seluruh laporan CBT, presensi, dan pembelajaran.
+
+
+> Super Admin dapat melakukan semua pekerjaan Admin dan Guru.
+
+
+
+
+---
+
+LEVEL 2 : ADMIN
+
+Memiliki akses ±90%.
+
+Hak akses Admin sama seperti Guru ditambah:
+
+Mengelola seluruh data Guru.
+
+Mengelola seluruh data Siswa.
+
+Import seluruh data kelas.
+
+Mengatur pembagian kelas Guru.
+
+Mengelola jadwal pembelajaran.
+
+Monitoring seluruh CBT.
+
+Monitoring seluruh presensi.
+
+Reset password pengguna.
+
+
+> Admin juga dapat membuat CBT, upload materi, dan membuat presensi sebagaimana Guru.
+
+
+
+
+---
+
+LEVEL 3 : GURU
+
+Memiliki akses ±70%.
+
+Guru hanya dibatasi pada:
+
+Kelas yang diampu.
+
+Siswa yang diampu.
+
+Mata pelajaran yang diampu.
+
+
+Guru dapat:
+
+Membuat kelas virtual.
+
+Menambah dan menghapus siswa di kelasnya.
+
+Import data siswa melalui Excel.
+
+Membuat CBT.
+
+Upload PDF soal.
+
+Upload materi pembelajaran.
+
+Upload video pembelajaran.
+
+Membuat LKPD.
+
+Membuat presensi.
+
+Melihat nilai siswa.
+
+Export nilai.
+
+Melihat laporan aktivitas belajar siswa.
+
+
+Contoh
+
+Guru A mengajar:
+
+X DPIB 1
+
+XI TKP 2
+
+
+Maka yang terlihat hanya:
+
+X DPIB 1
+
+XI TKP 2
+
+
+Guru tidak dapat melihat:
+
+XII LAS
+
+XI Mekatronika
+
+Data milik Guru lain.
+
+
+
+---
+
+LEVEL 4 : SISWA
+
+Hak akses:
+
+Login Android.
+
+Login Website.
+
+Mengikuti CBT.
+
+Melakukan presensi.
+
+Mengakses materi.
+
+Menonton video pembelajaran.
+
+Mengumpulkan tugas.
+
+Melihat nilai.
+
+Mengunduh materi apabila diizinkan Guru.
+
+
+
+---
+
+TAMBAHAN YANG SAYA SARANKAN
+
+Karena ini akan digunakan dalam pembelajaran, saya menyarankan ditambahkan fitur:
+
+Learning Analytics
+
+Guru dapat melihat:
+
+Berapa menit siswa membuka materi.
+
+Berapa menit menonton video.
+
+Jam login siswa.
+
+Jam logout siswa.
+
+Nilai CBT.
+
+Riwayat pengerjaan soal.
+
+Persentase kehadiran.
+
+Aktivitas belajar siswa.
+
+
+Dashboard Guru
+
+Misalnya:
+
+> X DPIB 1
+
+Jumlah siswa = 36
+
+Hadir = 34
+
+Tidak hadir = 2
+
+Sudah membaca materi = 32
+
+Sudah menonton video = 30
+
+Sudah mengerjakan CBT = 33
+
+Belum mengerjakan CBT = 3
+
+Nilai rata-rata = 87
+
+
+
+
+
+---
+
+FITUR IMPORT DATA
+
+Yang saya sarankan:
+
+Guru dapat mengimpor:
+
+Data siswa.
+
+Kelas.
+
+Jadwal pembelajaran.
+
+Bank soal.
+
+
+Format:
+
+Excel.
+
+CSV.
+
+PDF.
+
+Word.
+
+
+Sistem akan otomatis:
+
+Membuat akun siswa.
+
+Membuat kelas.
+
+Membuat pembagian kelas.
+
+Mengelompokkan siswa sesuai rombel.
+
+
+
+---
+
+KONSEP HAK AKSES
+
+SUPER ADMIN
+      ↓
+    ADMIN
+      ↓
+    GURU
+      ↓
+    SISWA
+
+Prinsipnya adalah:
+
+> Hak akses Guru = dimiliki juga oleh Admin dan Super Admin.
+
+Hak akses Admin = dimiliki juga oleh Super Admin.
+
+Hak akses Guru dibatasi hanya pada kelas, mata pelajaran, dan siswa yang diampunya.
+
+
+Dengan konsep seperti ini, sistem menjadi lebih fleksibel, aman, dan mudah dikelola. Apabila suatu saat aplikasi digunakan oleh satu sekolah bahkan beberapa sekolah sekaligus, struktur hak aksesnya sudah siap untuk dikembangkan tanpa perlu mengubah arsitektur sistem yang sudah dibuat. Untuk warna background dari aplikasi ataupun dari websitenya bisa dengan background yang sama nggak ya Pak seperti ini warna biru elektrik
