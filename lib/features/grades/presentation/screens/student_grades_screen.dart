@@ -81,6 +81,7 @@ class _StudentGradesScreenState extends State<StudentGradesScreen> {
     final authProvider = context.watch<AuthProvider>();
     final isStudent = authProvider.userRole == 'Siswa' || authProvider.userRole == null;
     final isMobile = MediaQuery.of(context).size.width < 1000;
+    final activeRoute = GoRouterState.of(context).matchedLocation;
 
     final filteredGrades = _grades.where((g) {
       if (_activeFilter == 'Semua') return true;
@@ -89,11 +90,11 @@ class _StudentGradesScreenState extends State<StudentGradesScreen> {
 
     return Scaffold(
       key: _scaffoldKey,
-      drawer: isMobile ? const AppSidebar(activeRoute: '/grades') : null,
-      bottomNavigationBar: (isMobile || isStudent) ? const StudentBottomNav(activeRoute: '/grades') : null,
+      drawer: isMobile ? AppSidebar(activeRoute: activeRoute) : null,
+      bottomNavigationBar: (isMobile || isStudent) ? StudentBottomNav(activeRoute: activeRoute) : null,
       body: Row(
         children: [
-          if (!isMobile) const AppSidebar(activeRoute: '/grades'),
+          if (!isMobile) AppSidebar(activeRoute: activeRoute),
           Expanded(
             child: Column(
               children: [

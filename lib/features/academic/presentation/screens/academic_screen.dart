@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/widgets/custom_card.dart';
 import '../../../../core/widgets/status_chip.dart';
@@ -26,13 +27,14 @@ class _AcademicScreenState extends State<AcademicScreen> {
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     final isMobile = MediaQuery.of(context).size.width < 1000;
+    final activeRoute = GoRouterState.of(context).matchedLocation;
 
     return Scaffold(
       key: _scaffoldKey,
-      drawer: isMobile ? const AppSidebar(activeRoute: '/academic') : null,
+      drawer: isMobile ? AppSidebar(activeRoute: activeRoute) : null,
       body: Row(
         children: [
-          if (!isMobile) const AppSidebar(activeRoute: '/academic'),
+          if (!isMobile) AppSidebar(activeRoute: activeRoute),
           Expanded(
             child: Column(
               children: [

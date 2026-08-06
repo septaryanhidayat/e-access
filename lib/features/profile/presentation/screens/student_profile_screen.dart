@@ -34,14 +34,15 @@ class _StudentProfileScreenState extends State<StudentProfileScreen> {
     final isStudent = authProvider.userRole == 'Siswa' || authProvider.userRole == null;
 
     final isMobile = MediaQuery.of(context).size.width < 1000;
+    final activeRoute = GoRouterState.of(context).matchedLocation;
 
     return Scaffold(
       key: _scaffoldKey,
-      drawer: isMobile ? const AppSidebar(activeRoute: '/profile') : null,
-      bottomNavigationBar: (isMobile || isStudent) ? const StudentBottomNav(activeRoute: '/profile') : null,
+      drawer: isMobile ? AppSidebar(activeRoute: activeRoute) : null,
+      bottomNavigationBar: (isMobile || isStudent) ? StudentBottomNav(activeRoute: activeRoute) : null,
       body: Row(
         children: [
-          if (!isMobile) const AppSidebar(activeRoute: '/profile'),
+          if (!isMobile) AppSidebar(activeRoute: activeRoute),
           Expanded(
             child: Column(
               children: [
