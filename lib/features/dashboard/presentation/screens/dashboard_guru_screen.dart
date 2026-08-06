@@ -33,12 +33,14 @@ class _DashboardGuruScreenState extends State<DashboardGuruScreen> {
     final tileBg = isDark ? const Color(0xFF0B1326) : const Color(0xFFF8FAFC);
     final borderCol = isDark ? const Color(0xFF1E293B) : const Color(0xFFE2E8F0);
 
+    final activeRoute = GoRouterState.of(context).matchedLocation;
+
     return Scaffold(
       key: _scaffoldKey,
-      drawer: isMobile ? const AppSidebar(activeRoute: '/') : null,
+      drawer: isMobile ? AppSidebar(activeRoute: activeRoute) : null,
       body: Row(
         children: [
-          if (!isMobile) const AppSidebar(activeRoute: '/'),
+          if (!isMobile) AppSidebar(activeRoute: activeRoute),
           Expanded(
             child: Column(
               children: [

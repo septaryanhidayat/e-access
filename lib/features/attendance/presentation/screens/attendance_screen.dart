@@ -71,6 +71,7 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
     final authProvider = context.watch<AuthProvider>();
     final isStudent = authProvider.userRole == 'Siswa' || authProvider.userRole == null;
     final isMobile = MediaQuery.of(context).size.width < 1000;
+    final activeRoute = GoRouterState.of(context).matchedLocation;
 
     final filteredHistory = _attendanceHistory.where((h) {
       if (_selectedFilterStatus == null) return true;
@@ -79,11 +80,11 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
 
     return Scaffold(
       key: _scaffoldKey,
-      drawer: isMobile ? const AppSidebar(activeRoute: '/attendance') : null,
-      bottomNavigationBar: (isMobile || isStudent) ? const StudentBottomNav(activeRoute: '/attendance') : null,
+      drawer: isMobile ? AppSidebar(activeRoute: activeRoute) : null,
+      bottomNavigationBar: (isMobile || isStudent) ? StudentBottomNav(activeRoute: activeRoute) : null,
       body: Row(
         children: [
-          if (!isMobile) const AppSidebar(activeRoute: '/attendance'),
+          if (!isMobile) AppSidebar(activeRoute: activeRoute),
           Expanded(
             child: Column(
               children: [
