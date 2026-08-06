@@ -72,28 +72,41 @@ class AppHeader extends StatelessWidget implements PreferredSizeWidget {
             ),
 
           // Role Badge Pill (Match Reference Image)
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-            decoration: BoxDecoration(
-              color: roleColor.withAlpha(25),
-              borderRadius: BorderRadius.circular(20),
-              border: Border.all(color: roleColor.withAlpha(150)),
-            ),
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Icon(Icons.workspace_premium_rounded, color: roleColor, size: 16),
-                const SizedBox(width: 6),
-                Text(
-                  roleLabel,
-                  style: TextStyle(
-                    color: roleColor,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 11,
-                    letterSpacing: 0.5,
+          InkWell(
+            onTap: (role == 'Super Admin' || role == 'Admin')
+                ? () {
+                    final nextRole = role == 'Super Admin' ? 'Admin' : 'Super Admin';
+                    authProvider.setDemoRole(nextRole);
+                  }
+                : null,
+            borderRadius: BorderRadius.circular(20),
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+              decoration: BoxDecoration(
+                color: roleColor.withAlpha(25),
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(color: roleColor.withAlpha(150)),
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(Icons.workspace_premium_rounded, color: roleColor, size: 16),
+                  const SizedBox(width: 6),
+                  Text(
+                    roleLabel,
+                    style: TextStyle(
+                      color: roleColor,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 11,
+                      letterSpacing: 0.5,
+                    ),
                   ),
-                ),
-              ],
+                  if (role == 'Super Admin' || role == 'Admin') ...[
+                    const SizedBox(width: 4),
+                    Icon(Icons.swap_horiz_rounded, color: roleColor, size: 14),
+                  ],
+                ],
+              ),
             ),
           ),
 

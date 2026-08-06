@@ -1,0 +1,344 @@
+<!DOCTYPE html><html class="dark" lang="id" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Materi Pembelajaran</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#ffeedd",
+                        "on-background": "#dae2fd",
+                        "surface-variant": "#2d3449",
+                        "on-error": "#690005",
+                        "surface-container-high": "#222a3d",
+                        "outline": "#8d90a0",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "secondary-fixed-dim": "#4edea3",
+                        "on-tertiary-fixed": "#2a1700",
+                        "surface-bright": "#31394d",
+                        "on-surface": "#dae2fd",
+                        "surface-container-low": "#131b2e",
+                        "primary-container": "#2563eb",
+                        "surface-container-highest": "#2d3449",
+                        "outline-variant": "#434655",
+                        "on-secondary-fixed-variant": "#005236",
+                        "secondary-fixed": "#6ffbbe",
+                        "surface-container-lowest": "#060e20",
+                        "tertiary-fixed": "#ffddb8",
+                        "inverse-surface": "#dae2fd",
+                        "inverse-primary": "#0053db",
+                        "surface": "#0b1326",
+                        "inverse-on-surface": "#283044",
+                        "surface-container": "#171f33",
+                        "primary-fixed": "#dbe1ff",
+                        "tertiary-container": "#996100",
+                        "secondary": "#4edea3",
+                        "tertiary-fixed-dim": "#ffb95f",
+                        "on-secondary-fixed": "#002113",
+                        "on-primary-container": "#eeefff",
+                        "surface-dim": "#0b1326",
+                        "surface-tint": "#b4c5ff",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "error-container": "#93000a",
+                        "secondary-container": "#00a572",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "on-primary": "#002a78",
+                        "tertiary": "#ffb95f",
+                        "on-surface-variant": "#c3c6d7",
+                        "background": "#0b1326",
+                        "on-tertiary": "#472a00",
+                        "primary": "#b4c5ff",
+                        "on-primary-fixed": "#00174b",
+                        "on-secondary-container": "#00311f",
+                        "on-secondary": "#003824"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "xl": "32px",
+                        "container-margin": "16px",
+                        "gutter": "12px",
+                        "xs": "8px",
+                        "lg": "24px",
+                        "md": "16px",
+                        "sm": "12px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "label-sm": ["Manrope"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "label-md": ["Manrope"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "headline-sm": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-sm": ["10px", { "lineHeight": "14px", "fontWeight": "700" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["22px", { "lineHeight": "28px", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Hide scrollbar for clean UI */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        /* Custom progress bar gradients */
+        .progress-gradient {
+            background: linear-gradient(90deg, var(--tw-colors-secondary-fixed) 0%, var(--tw-colors-primary-container) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container pb-24 md:pb-0 pt-[72px]">
+<!-- Top App Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-md border-b border-outline-variant shadow-sm px-container-margin py-xs flex justify-between items-center max-w-full">
+<div class="flex items-center gap-sm">
+<button class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container-highest transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h1 class="text-headline-md font-headline-md font-bold text-primary-fixed-dim">Materi Pembelajaran</h1>
+</div>
+<div class="flex items-center gap-xs">
+<button class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container-highest transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined text-2xl">search</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-[1200px] mx-auto flex flex-col md:flex-row h-full">
+<!-- Desktop Sidebar Nav (Hidden on Mobile) -->
+<nav class="hidden md:flex flex-col w-64 bg-surface-container-low border-r border-outline-variant p-container-margin h-[calc(100vh-72px)] sticky top-[72px]">
+<div class="space-y-sm">
+<a class="flex items-center gap-sm px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-highest transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-md text-label-md">Beranda</span>
+</a>
+<a class="flex items-center gap-sm px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-highest transition-colors" href="#">
+<span class="material-symbols-outlined">quiz</span>
+<span class="font-label-md text-label-md">CBT</span>
+</a>
+<a class="flex items-center gap-sm px-4 py-3 rounded-xl bg-primary-container/20 text-primary-fixed-dim font-bold transition-all scale-100 shadow-[0_0_15px_rgba(37,99,235,0.3)]" href="#">
+<span class="material-symbols-outlined filled">menu_book</span>
+<span class="font-label-md text-label-md">Materi</span>
+</a>
+<a class="flex items-center gap-sm px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-highest transition-colors" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-label-md text-label-md">Presensi</span>
+</a>
+<a class="flex items-center gap-sm px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-highest transition-colors" href="#">
+<span class="material-symbols-outlined">grade</span>
+<span class="font-label-md text-label-md">Nilai</span>
+</a>
+<a class="flex items-center gap-sm px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-highest transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-md text-label-md">Profil</span>
+</a>
+</div>
+</nav>
+<!-- Main Scrollable Area -->
+<div class="flex-grow flex flex-col p-container-margin gap-lg">
+<!-- Category Chips -->
+<div class="flex gap-sm overflow-x-auto no-scrollbar pb-xs">
+<button class="px-4 py-1.5 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md whitespace-nowrap">Semua</button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md whitespace-nowrap border border-outline-variant hover:bg-surface-container-highest transition-colors">Bahasa Indonesia</button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md whitespace-nowrap border border-outline-variant hover:bg-surface-container-highest transition-colors">Informatika</button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md whitespace-nowrap border border-outline-variant hover:bg-surface-container-highest transition-colors">Matematika</button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md whitespace-nowrap border border-outline-variant hover:bg-surface-container-highest transition-colors">Lainnya</button>
+</div>
+<!-- Materi Terbaru Section -->
+<section class="flex flex-col gap-sm">
+<div class="flex justify-between items-center">
+<h2 class="text-headline-sm font-headline-sm text-on-surface">Materi Terbaru</h2>
+<button class="text-primary-fixed-dim font-label-md text-label-md hover:underline bg-transparent">Lihat Semua</button>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-surface-container-low rounded-xl border-t border-outline-variant/30 border border-outline-variant shadow-[0_8px_24px_rgba(0,0,0,0.4)] p-md flex flex-col gap-sm relative overflow-hidden group hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex gap-md">
+<div class="w-16 h-16 rounded-lg overflow-hidden shrink-0 bg-surface-container-high flex items-center justify-center border border-outline-variant bg-primary-container/20"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ2YCGJzKZTefVAwI-CB6opouzZjWrqXcfbj8EG6H37qY-I5SbHclpca3q3Ic7CBz0s_5rI841kUMyhY52lN4HQlUCraGPaazU9XktfcTeltzMxntPkGJw5l3oIwsiXK2IqVUszdXZ2dXmbgvEEqSZRoml1Yz83ftHPxqE54YTh5Pj8DwFGm8U77oBVWLTR8Uhht5xCWNFMD7FJMUn03Ft6gIibVzFNgEQztq0hBFU6uECuH7fZ4nXGg" alt="Bahasa Indonesia" class="w-12 h-12 object-contain"></div>
+<div class="flex flex-col flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="text-body-md font-body-md font-bold text-on-surface line-clamp-2">Teks Laporan Hasil Observasi (LHO) <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-secondary/15 text-secondary border border-secondary/30 ml-2">Baru</span></h3>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant mt-1">Bahasa Indonesia • Kelas X</p>
+<div class="mt-auto pt-2 flex items-center justify-between gap-sm">
+<div class="flex-grow bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="progress-gradient h-full w-[75%] rounded-full"></div>
+</div>
+<span class="text-label-sm font-label-sm text-primary-fixed-dim">75%</span>
+<button class="text-on-surface-variant hover:text-primary-fixed-dim transition-colors ml-2">
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0LLmRjgvmtoETILfAOmBy7k_68amWw_OKDks2hTgmyI6YULvhF-93Q4mMjgzARpWVCJVEBn6LdeCp2kyYemFtCba6vfxRDRhIG7SnvKO-Pdrh3H14O2AxX2vQI1ozX7h12IcZOLTB_LfOMYJKoQ1502SMltTeLc7peY59viyAtWr5hrIqbN6Wf3u059gunUysahnjQAySrJvSQ7atsJIV4AR4OTPBXq2pAfm63PcaYmiInha1P272ZQ" alt="Bahasa Indonesia" class="w-12 h-12 object-contain">
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-low rounded-xl border-t border-outline-variant/30 border border-outline-variant shadow-[0_8px_24px_rgba(0,0,0,0.4)] p-md flex flex-col gap-sm relative overflow-hidden group hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex gap-md">
+<div class="w-16 h-16 rounded-lg overflow-hidden shrink-0 bg-surface-container-high flex items-center justify-center border border-outline-variant bg-tertiary-container/20"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ2YCGJzKZTefVAwI-CB6opouzZjWrqXcfbj8EG6H37qY-I5SbHclpca3q3Ic7CBz0s_5rI841kUMyhY52lN4HQlUCraGPaazU9XktfcTeltzMxntPkGJw5l3oIwsiXK2IqVUszdXZ2dXmbgvEEqSZRoml1Yz83ftHPxqE54YTh5Pj8DwFGm8U77oBVWLTR8Uhht5xCWNFMD7FJMUn03Ft6gIibVzFNgEQztq0hBFU6uECuH7fZ4nXGg" alt="Bahasa Indonesia" class="w-12 h-12 object-contain"></div>
+<div class="flex flex-col flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="text-body-md font-body-md font-bold text-on-surface line-clamp-2">Teks Anekdot <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-secondary/15 text-secondary border border-secondary/30 ml-2">Baru</span></h3>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant mt-1">Bahasa Indonesia • Kelas X</p>
+<div class="mt-auto pt-2 flex items-center justify-between gap-sm">
+<div class="flex-grow bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="progress-gradient h-full w-[60%] rounded-full"></div>
+</div>
+<span class="text-label-sm font-label-sm text-primary-fixed-dim">60%</span>
+<button class="text-on-surface-variant hover:text-primary-fixed-dim transition-colors ml-2">
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0LLmRjgvmtoETILfAOmBy7k_68amWw_OKDks2hTgmyI6YULvhF-93Q4mMjgzARpWVCJVEBn6LdeCp2kyYemFtCba6vfxRDRhIG7SnvKO-Pdrh3H14O2AxX2vQI1ozX7h12IcZOLTB_LfOMYJKoQ1502SMltTeLc7peY59viyAtWr5hrIqbN6Wf3u059gunUysahnjQAySrJvSQ7atsJIV4AR4OTPBXq2pAfm63PcaYmiInha1P272ZQ" alt="Bahasa Indonesia" class="w-12 h-12 object-contain">
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-low rounded-xl border-t border-outline-variant/30 border border-outline-variant shadow-[0_8px_24px_rgba(0,0,0,0.4)] p-md flex flex-col gap-sm relative overflow-hidden group hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex gap-md">
+<div class="w-16 h-16 rounded-lg overflow-hidden shrink-0 bg-surface-container-high flex items-center justify-center border border-outline-variant bg-secondary-container/20"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ2YCGJzKZTefVAwI-CB6opouzZjWrqXcfbj8EG6H37qY-I5SbHclpca3q3Ic7CBz0s_5rI841kUMyhY52lN4HQlUCraGPaazU9XktfcTeltzMxntPkGJw5l3oIwsiXK2IqVUszdXZ2dXmbgvEEqSZRoml1Yz83ftHPxqE54YTh5Pj8DwFGm8U77oBVWLTR8Uhht5xCWNFMD7FJMUn03Ft6gIibVzFNgEQztq0hBFU6uECuH7fZ4nXGg" alt="Bahasa Indonesia" class="w-12 h-12 object-contain"></div>
+<div class="flex flex-col flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="text-body-md font-body-md font-bold text-on-surface line-clamp-2">Hikayat <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-secondary/15 text-secondary border border-secondary/30 ml-2">Baru</span></h3>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant mt-1">Bahasa Indonesia • Kelas X</p>
+<div class="mt-auto pt-2 flex items-center justify-between gap-sm">
+<div class="flex-grow bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="progress-gradient h-full w-[40%] rounded-full"></div>
+</div>
+<span class="text-label-sm font-label-sm text-primary-fixed-dim">40%</span>
+<button class="text-on-surface-variant hover:text-primary-fixed-dim transition-colors ml-2">
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0LLmRjgvmtoETILfAOmBy7k_68amWw_OKDks2hTgmyI6YULvhF-93Q4mMjgzARpWVCJVEBn6LdeCp2kyYemFtCba6vfxRDRhIG7SnvKO-Pdrh3H14O2AxX2vQI1ozX7h12IcZOLTB_LfOMYJKoQ1502SMltTeLc7peY59viyAtWr5hrIqbN6Wf3u059gunUysahnjQAySrJvSQ7atsJIV4AR4OTPBXq2pAfm63PcaYmiInha1P272ZQ" alt="Bahasa Indonesia" class="w-12 h-12 object-contain">
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-low rounded-xl border-t border-outline-variant/30 border border-outline-variant shadow-[0_8px_24px_rgba(0,0,0,0.4)] p-md flex flex-col gap-sm relative overflow-hidden group hover:bg-surface-container-high transition-colors cursor-pointer border-l-4 border-l-secondary-fixed">
+<div class="flex gap-md">
+<div class="w-16 h-16 rounded-lg overflow-hidden shrink-0 bg-secondary/10 flex items-center justify-center border border-secondary/20"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoQ7aLgZooaioDSlqlEp_7S_Za5ew6EFUukv32iA0ep-SxpRd0ZqcqD6lEqJ1FU8Xb3F3vEehHqPSorP3SAInUVCgJtIcGgrd6jnzEnZ2sUji5q1bsCvIAx0Q2W3GjLegxL9KIxNNjCPOWR4yRFj7Oionlp00WF-h0c--264lyoQb6l59A8mDJH38HCKBlKKBp9S3LlKxQDm3pVRJb3XBd0E4JIDLzez3bfREDeK6zIk0BK_7yAeDWMA" alt="Informatika" class="w-12 h-12 object-contain"></div>
+<div class="flex flex-col flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="text-body-md font-body-md font-bold text-on-surface line-clamp-2">Algoritma &amp; Flowchart <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-secondary/15 text-secondary border border-secondary/30 ml-2">Baru</span></h3>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant mt-1">Informatika • Kelas X</p>
+<div class="mt-auto pt-2 flex items-center justify-between gap-sm">
+<div class="flex-grow bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="progress-gradient h-full w-[20%] rounded-full"></div>
+</div>
+<span class="text-label-sm font-label-sm text-primary-fixed-dim">20%</span>
+<button class="text-on-surface-variant hover:text-primary-fixed-dim transition-colors ml-2">
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt1DSu83JfPbtvZnz9Q8bw1RZ7b3ZzmKI3E_Uha5hX9MphALbZsHhd9wucNVkwnAFpuXOtxZOlJXTG3d5AviX_8x1CpiZ9WCJ1fnTebyj9f1awXwWEtYmj0PD9C_2jw-c5k_xKffoCvvUZJlvPeNwe9V9n92KJSxfi4zYKzvDNqCCLTJLh-909PQEXwj_CczVjf3M9qaLF-1xOXmk3hZSGaySP0tepPlOGYylSF1TrWZ1TgU00iC4erg" alt="Informatika" class="w-12 h-12 object-contain">
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Kategori Materi Section (Bento Grid Style) -->
+<section class="flex flex-col gap-sm mt-4">
+<h2 class="text-headline-sm font-headline-sm text-on-surface">Kategori Materi</h2>
+<div class="grid grid-cols-4 md:grid-cols-8 gap-gutter">
+<div class="col-span-1 md:col-span-2 bg-surface-container-low rounded-xl border-t border-outline-variant/30 border border-outline-variant shadow-sm p-4 flex flex-col items-center justify-center gap-xs hover:bg-surface-container-highest transition-colors cursor-pointer text-center group">
+<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center group-hover:scale-110 transition-transform"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ2YCGJzKZTefVAwI-CB6opouzZjWrqXcfbj8EG6H37qY-I5SbHclpca3q3Ic7CBz0s_5rI841kUMyhY52lN4HQlUCraGPaazU9XktfcTeltzMxntPkGJw5l3oIwsiXK2IqVUszdXZ2dXmbgvEEqSZRoml1Yz83ftHPxqE54YTh5Pj8DwFGm8U77oBVWLTR8Uhht5xCWNFMD7FJMUn03Ft6gIibVzFNgEQztq0hBFU6uECuH7fZ4nXGg" alt="Bahasa Indonesia" class="w-10 h-10 object-contain"></div>
+<span class="text-label-md font-label-md text-on-surface mt-1">Bahasa<br>Indonesia</span>
+</div>
+<div class="col-span-1 md:col-span-2 bg-surface-container-low rounded-xl border-t border-outline-variant/30 border border-outline-variant shadow-sm p-4 flex flex-col items-center justify-center gap-xs hover:bg-surface-container-highest transition-colors cursor-pointer text-center group">
+<div class="w-12 h-12 rounded-full bg-secondary-container/20 flex items-center justify-center group-hover:scale-110 transition-transform"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoQ7aLgZooaioDSlqlEp_7S_Za5ew6EFUukv32iA0ep-SxpRd0ZqcqD6lEqJ1FU8Xb3F3vEehHqPSorP3SAInUVCgJtIcGgrd6jnzEnZ2sUji5q1bsCvIAx0Q2W3GjLegxL9KIxNNjCPOWR4yRFj7Oionlp00WF-h0c--264lyoQb6l59A8mDJH38HCKBlKKBp9S3LlKxQDm3pVRJb3XBd0E4JIDLzez3bfREDeK6zIk0BK_7yAeDWMA" alt="Informatika" class="w-10 h-10 object-contain"></div>
+<span class="text-label-md font-label-md text-on-surface mt-1">Informatika</span>
+</div>
+<div class="col-span-1 md:col-span-2 bg-surface-container-low rounded-xl border-t border-outline-variant/30 border border-outline-variant shadow-sm p-4 flex flex-col items-center justify-center gap-xs hover:bg-surface-container-highest transition-colors cursor-pointer text-center group">
+<div class="w-12 h-12 rounded-full bg-tertiary-container/20 flex items-center justify-center group-hover:scale-110 transition-transform"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDczfddSQRC8jUle-F7unnwOqc1lG5Su37Zxp9uHTYwPOVQt9mNPnpfm5BWJkhNN4ZmzAYcT7vWXZMUixrGJ0Tfyjo2RG7yB8HecSZfgN7E2OfXmksctgNrEANl-HytxrnHYSSahHflrw7pGhjy9H_XMuXaIraS0jf8vagmROpKVyUH9pupvPZ70vc5THc-C0k7M_9pGuVhE33j7Z7Nq9U-K62-8AthKkJ4RVCHb4dKGO0eToyCfIWSBw" alt="Matematika" class="w-10 h-10 object-contain"></div>
+<span class="text-label-md font-label-md text-on-surface mt-1">Matematika</span>
+</div>
+<div class="col-span-1 md:col-span-2 bg-surface-container-low rounded-xl border-t border-outline-variant/30 border border-outline-variant shadow-sm p-4 flex flex-col items-center justify-center gap-xs hover:bg-surface-container-highest transition-colors cursor-pointer text-center group">
+<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center group-hover:scale-110 transition-transform"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTu0U9lGWO4wgOTmZZrD7WHNsCpCqVHgnKXh0pvmLlI2godej2qc0e47vag29kp52bpJ_Hqij8qCMyl8v5TFA7Tde4OffK7c-HauSB1gtVGGXDT75b6Q7lRH42rSmyNu5NOSnaJRssv-tYw7X04XufIZT7fNDSvF8NuBDPVJWcvIBeQ5sqLwJTyuqzI9xIdPsZeZ6AgzLFmBljZXDQwblRHFrDnq988277OhjN6viU9Gcef684yX1TvQ" alt="Lainnya" class="w-10 h-10 object-contain"></div>
+<span class="text-label-md font-label-md text-on-surface mt-1">Lainnya</span>
+</div>
+</div>
+</section>
+<div class="h-8"></div> <!-- spacer -->
+</div>
+</main>
+<!-- Bottom Navigation Bar (Mobile Only) -->
+<nav class="bg-surface/60 dark:bg-surface/60 backdrop-blur-md shadow-lg docked full-width bottom-0 z-50 rounded-t-xl border-t border-outline-variant dark:border-outline-variant fixed left-0 w-full flex justify-around items-center px-4 py-2 pb-safe md:hidden">
+<!-- Beranda -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-70 hover:text-primary dark:hover:text-primary transition-all w-16" href="#">
+<img src="https://img.icons8.com/fluency/48/home.png" alt="Home" class="w-8 h-8 mb-1">
+<span class="text-label-sm font-label-sm">Beranda</span>
+</a>
+<!-- CBT -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-70 hover:text-primary dark:hover:text-primary transition-all w-16" href="#">
+<img src="https://img.icons8.com/fluency/48/test-passed.png" alt="CBT" class="w-8 h-8 mb-1">
+<span class="text-label-sm font-label-sm">CBT</span>
+</a>
+<!-- Materi (Active) -->
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim font-bold scale-110 hover:text-primary dark:hover:text-primary transition-all w-16 Active: scale-90 transition-transform duration-150 relative" href="#">
+<div class="absolute inset-0 bg-secondary/10 rounded-full blur-md -z-10"></div>
+<img src="https://img.icons8.com/fluency/48/book.png" alt="Materi" class="w-8 h-8 mb-1">
+<span class="text-label-sm font-label-sm">Materi</span>
+</a>
+<!-- Presensi -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-70 hover:text-primary dark:hover:text-primary transition-all w-16" href="#">
+<img src="https://img.icons8.com/fluency/48/calendar.png" alt="Presensi" class="w-8 h-8 mb-1">
+<span class="text-label-sm font-label-sm">Presensi</span>
+</a>
+<!-- Nilai -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-70 hover:text-primary dark:hover:text-primary transition-all w-16" href="#">
+<img src="https://img.icons8.com/fluency/48/star.png" alt="Nilai" class="w-8 h-8 mb-1">
+<span class="text-label-sm font-label-sm">Nilai</span>
+</a>
+<!-- Profil -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-70 hover:text-primary dark:hover:text-primary transition-all w-16" href="#">
+<img src="https://img.icons8.com/fluency/48/user-male-circle.png" alt="Profil" class="w-8 h-8 mb-1">
+<span class="text-label-sm font-label-sm">Profil</span>
+</a>
+</nav>
+
+
+</body></html>

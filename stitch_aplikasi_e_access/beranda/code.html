@@ -1,0 +1,339 @@
+<!DOCTYPE html><html class="dark" lang="id" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>E-ACCESS Beranda</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#ffeedd",
+                        "on-background": "#dae2fd",
+                        "surface-variant": "#2d3449",
+                        "on-error": "#690005",
+                        "surface-container-high": "#222a3d",
+                        "outline": "#8d90a0",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "secondary-fixed-dim": "#4edea3",
+                        "on-tertiary-fixed": "#2a1700",
+                        "surface-bright": "#31394d",
+                        "on-surface": "#dae2fd",
+                        "surface-container-low": "#131b2e",
+                        "primary-container": "#2563eb",
+                        "surface-container-highest": "#2d3449",
+                        "outline-variant": "#434655",
+                        "on-secondary-fixed-variant": "#005236",
+                        "secondary-fixed": "#6ffbbe",
+                        "surface-container-lowest": "#060e20",
+                        "tertiary-fixed": "#ffddb8",
+                        "inverse-surface": "#dae2fd",
+                        "inverse-primary": "#0053db",
+                        "surface": "#0b1326",
+                        "inverse-on-surface": "#283044",
+                        "surface-container": "#171f33",
+                        "primary-fixed": "#dbe1ff",
+                        "tertiary-container": "#996100",
+                        "secondary": "#4edea3",
+                        "tertiary-fixed-dim": "#ffb95f",
+                        "on-secondary-fixed": "#002113",
+                        "on-primary-container": "#eeefff",
+                        "surface-dim": "#0b1326",
+                        "surface-tint": "#b4c5ff",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "error-container": "#93000a",
+                        "secondary-container": "#00a572",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "on-primary": "#002a78",
+                        "tertiary": "#ffb95f",
+                        "on-surface-variant": "#c3c6d7",
+                        "background": "#0b1326",
+                        "on-tertiary": "#472a00",
+                        "primary": "#b4c5ff",
+                        "on-primary-fixed": "#00174b",
+                        "on-secondary-container": "#00311f",
+                        "on-secondary": "#003824"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "xl": "32px",
+                        "container-margin": "16px",
+                        "gutter": "12px",
+                        "xs": "8px",
+                        "lg": "24px",
+                        "md": "16px",
+                        "sm": "12px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "label-sm": ["Manrope"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "label-md": ["Manrope"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "headline-sm": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-sm": ["10px", {"lineHeight": "14px", "fontWeight": "700"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "headline-sm": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+                        "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["22px", {"lineHeight": "28px", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .glass-card {
+            background: linear-gradient(180deg, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 0.6) 100%);
+            backdrop-filter: blur(12px);
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col pb-24 antialiased selection:bg-primary-container selection:text-on-primary-container">
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center w-full px-container-margin py-xs max-w-7xl mx-auto">
+<div class="flex items-center gap-sm">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-high border border-outline-variant shrink-0">
+<img class="w-full h-full object-cover" data-alt="A headshot portrait of a cheerful Indonesian male high school student wearing a standard white uniform. The background is a clean, dark slate studio setting. Professional lighting, crisp focus, digital avatar style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr8s4BnzlSUA_2GVPwZH2xy8utJ66ZwRHecHNWiDUcgrPHN-m5G-kG0KSplZ9EXpEAl77tOiC54xCiLk-IjmXIXBzvBWS55lb_kzdSThG-EzQGGTpUYMkhm5e3512UOQ3Mf3PCIvWyVDzc3qyjJ-6F6O2qw8rtbWxhR-0dle9IxeGzl76d0IlabSmyArKBBft653ACEURcCviFiG0tjIRwDd4jkc0-9DRJ4EE9XuYGOI5gKERz9TEzzg">
+</div>
+<div class="flex flex-col justify-center">
+<span class="text-label-sm font-label-sm text-primary uppercase tracking-wider">E-ACCESS</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant" style="font-size: 8px;">Electronic Assessment System</span>
+</div>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-highest transition-colors relative group">
+<span class="material-symbols-outlined text-primary group-active:scale-95 transition-transform" style="font-variation-settings: 'FILL' 0;">notifications</span>
+<span class="absolute top-2 right-2.5 w-2 h-2 bg-error rounded-full border border-surface"></span>
+</button>
+</div>
+</header>
+<main class="flex-1 w-full max-w-7xl mx-auto px-container-margin pt-20 pb-md space-y-lg flex flex-col md:flex-row md:space-x-lg md:space-y-0">
+<div class="w-full md:w-2/3 space-y-lg">
+<section class="space-y-sm">
+<div class="flex justify-between items-start">
+<div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface md:font-headline-lg md:text-headline-lg">Halo, Andi Pratama! 👋</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Semangat belajar hari ini!</p>
+</div>
+</div>
+<div class="flex items-center gap-xs mt-2 flex-wrap">
+<div class="bg-primary/15 border border-primary/30 rounded-full px-3 py-1 flex items-center gap-1 shadow-[0_0_10px_rgba(37,99,235,0.2)]">
+<span class="font-label-sm text-label-sm text-primary tracking-wide">LEVEL 4 SISWA</span>
+</div>
+<div class="bg-surface-container-high border border-outline-variant rounded-full px-3 py-1 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary text-[14px]" style="font-variation-settings: 'FILL' 1;">shield</span>
+<span class="font-label-sm text-label-sm text-on-surface">SMK NEGERI 2 BALIKPAPAN</span>
+</div>
+</div>
+</section>
+<section class="relative w-full rounded-xl overflow-hidden bg-gradient-to-r to-surface-container border border-outline-variant/50 shadow-[0_8px_24px_rgba(0,0,0,0.4)] p-md flex items-center justify-between group from-primary/20">
+<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+<div class="relative z-10 w-2/3 space-y-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-snug">Belajar · Ujian · Nilai · Prestasi</h2>
+<p class="font-label-md text-label-md text-on-surface-variant">Semua dalam satu genggaman</p>
+</div>
+<div class="relative z-10 w-1/3 flex justify-end">
+<img class="w-24 h-24 object-contain drop-shadow-[0_10px_15px_rgba(0,0,0,0.5)]" data-alt="A highly stylized 3D rendering of a glowing smartphone displaying an upward trending chart, surrounded by floating minimalist geometric shapes and a stylized graduation cap. The objects are illuminated by vibrant neon blue and green accents against a dark slate background, conveying a high-tech educational theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEifmXwD3qOxuBdICVICbE7COZruZY8pMuXObWVGd_RridAWyF8NTZAQCRBcdEMZo-UJKQ6hbhScUJCwqc5wVDqFsWE5K1jtsgeDnplv0s72qmUMv02tmcj3vHciac8wq08mLZCUCTl0T0eC-LMGG4LNOGxmRET0hxXGKa2WcAIv8Gmm6KcXTil15SgI9C1SoXy_CAZlkSNXMIFqLoR12USX0dHOObpwy3J1qeEPFsIy7wroauIVtj1Q">
+</div>
+</section>
+<section class="space-y-sm">
+<div class="flex justify-between items-center">
+<h3 class="font-headline-md text-headline-md text-on-surface">Ringkasan Aktivitas</h3>
+<button class="font-label-md text-label-md text-primary hover:text-primary-fixed transition-colors">Lihat Semua</button>
+</div>
+<div class="grid grid-cols-3 md:grid-cols-6 gap-gutter">
+<div class="glass-card rounded-xl p-sm flex flex-col items-center justify-center text-center space-y-1 relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300 bg-primary/5">
+<div class="absolute top-0 right-0 w-8 h-8 bg-primary/20 rounded-bl-full filter blur-md"></div>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">assignment</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">18</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase text-[9px] leading-tight">Total CBT<br>Tersedia</span>
+</div>
+<div class="glass-card rounded-xl p-sm flex flex-col items-center justify-center text-center space-y-1 relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300 bg-secondary/5">
+<div class="absolute top-0 left-0 w-8 h-8 bg-secondary/20 rounded-br-full filter blur-md"></div>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">12</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase text-[9px] leading-tight">CBT<br>Selesai</span>
+</div>
+<div class="glass-card rounded-xl p-sm flex flex-col items-center justify-center text-center space-y-1 relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+<div class="absolute bottom-0 right-0 w-8 h-8 bg-tertiary/20 rounded-tl-full filter blur-md"></div>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center mb-1">
+<img src="https://lh3.googleusercontent.com/aida/AP1WRLvv1t0o0pn4vF31GYYzR8nZidUZU3D2gTMjPmsAC2WEIWcKRqMVCkDseNn6jdRsi30naJ3mP-LLJEA2W-VC77fKZxa06hYVzKwHtrtMJ1z_FIp3Dbse2rKiVkLdNQ9CNr0kH_HQGfzaHDbuK9OEwZJr6GrNoCqS6Ti2vATtceFA6PfStkIPaZLQBCREMEy9nWU8L6QtOQU0B9KZ-3bfLjHfEo9ySOHwNwJJBOS3x5hUGvvbqqmX-mAvjstO" class="w-6 h-6 object-contain" alt="Trophy 3D">
+</div>
+<span class="font-headline-sm text-headline-sm text-tertiary">78,6</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase text-[9px] leading-tight">Rata-rata<br>Nilai</span>
+</div>
+<div class="glass-card rounded-xl p-sm flex flex-col items-center justify-center text-center space-y-1 relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+<div class="absolute inset-0 bg-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">how_to_reg</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">92,4%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase text-[9px] leading-tight">Presensi<br>Hadir</span>
+</div>
+<div class="glass-card rounded-xl p-sm flex flex-col items-center justify-center text-center space-y-1 relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center mb-1">
+<img src="https://lh3.googleusercontent.com/aida/AP1WRLvv1t0o0pn4vF31GYYzR8nZidUZU3D2gTMjPmsAC2WEIWcKRqMVCkDseNn6jdRsi30naJ3mP-LLJEA2W-VC77fKZxa06hYVzKwHtrtMJ1z_FIp3Dbse2rKiVkLdNQ9CNr0kH_HQGfzaHDbuK9OEwZJr6GrNoCqS6Ti2vATtceFA6PfStkIPaZLQBCREMEy9nWU8L6QtOQU0B9KZ-3bfLjHfEo9ySOHwNwJJBOS3x5hUGvvbqqmX-mAvjstO" class="w-6 h-6 object-contain" alt="Rank 3D">
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">7</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase text-[9px] leading-tight">Peringkat<br>Dari 32</span>
+</div>
+<div class="glass-card rounded-xl p-sm flex flex-col items-center justify-center text-center space-y-1 relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+<div class="absolute inset-0 bg-tertiary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center mb-1">
+<img src="https://lh3.googleusercontent.com/aida/AP1WRLvjq_ojc7boHPDJsZgwDAWbEaK50tnV9YhRUnG4AE2sdh8VvSEEsamAGh_hmkcD9o4J3WPCcHXOg5LH6cQkPDvuElTDy6_fttAeXPmvqTmrUHWrtm-x13x7TALE-XIePtxMYwRRvPyJhuXUeVReqk0-gpBiXAb3bxWLLtAvU-lV-D0egMY1dzmGMla0PfFazd7CqVDBH6jHM8PyGFC4Zct3tt86MlnN8I-pJ-HZ7D_XwL7ZPSwEhLIpgvgJ" class="w-6 h-6 object-contain" alt="Book 3D">
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">24</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase text-[9px] leading-tight">Materi<br>Dipelajari</span>
+</div>
+</div>
+</section>
+</div>
+<div class="w-full md:w-1/3 space-y-lg">
+<section class="space-y-sm">
+<div class="flex justify-between items-center">
+<h3 class="font-headline-md text-headline-md text-on-surface">Jadwal Hari Ini</h3>
+<button class="font-label-md text-label-md text-primary hover:text-primary-fixed transition-colors">Lihat Jadwal</button>
+</div>
+<div class="space-y-2">
+<div class="bg-surface-container-low border border-outline-variant/30 rounded-lg p-sm flex items-center justify-between group hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-sm">
+<div class="w-1.5 h-10 bg-primary rounded-full shadow-[0_0_8px_rgba(37,99,235,0.6)] shadow-[0_0_15px_rgba(37,99,235,0.8)]"></div>
+<div>
+<p class="font-label-md text-label-md text-on-surface-variant">08:00 - 09:30</p>
+<p class="font-body-md text-body-md text-on-surface font-semibold">Bahasa Indonesia</p>
+</div>
+</div>
+<span class="bg-surface-container-highest px-2 py-1 rounded text-[10px] font-bold text-on-surface-variant">X TKJ 1</span>
+</div>
+<div class="bg-surface-container-low border border-outline-variant/30 rounded-lg p-sm flex items-center justify-between group hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-sm">
+<div class="w-1.5 h-10 bg-tertiary rounded-full shadow-[0_0_8px_rgba(255,185,95,0.4)] shadow-[0_0_15px_rgba(255,185,95,0.7)]"></div>
+<div>
+<p class="font-label-md text-label-md text-on-surface-variant">10:00 - 11:30</p>
+<p class="font-body-md text-body-md text-on-surface font-semibold">Informatika</p>
+</div>
+</div>
+<span class="bg-surface-container-highest px-2 py-1 rounded text-[10px] font-bold text-on-surface-variant">X TKJ 1</span>
+</div>
+<div class="bg-surface-container-low border border-outline-variant/30 rounded-lg p-sm flex items-center justify-between group hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-sm">
+<div class="w-1.5 h-10 bg-secondary rounded-full shadow-[0_0_8px_rgba(78,222,163,0.4)] shadow-[0_0_15px_rgba(78,222,163,0.7)]"></div>
+<div>
+<p class="font-label-md text-label-md text-on-surface-variant">13:00 - 14:30</p>
+<p class="font-body-md text-body-md text-on-surface font-semibold">Matematika</p>
+</div>
+</div>
+<span class="bg-surface-container-highest px-2 py-1 rounded text-[10px] font-bold text-on-surface-variant">X TKJ 1</span>
+</div>
+</div>
+</section>
+<section class="space-y-sm">
+<div class="flex justify-between items-center">
+<h3 class="font-headline-md text-headline-md text-on-surface">Pengumuman Terbaru</h3>
+<button class="font-label-md text-label-md text-primary hover:text-primary-fixed transition-colors">Lihat Semua</button>
+</div>
+<div class="bg-surface-container-high border-t border-white/10 rounded-xl p-sm flex items-start gap-sm shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">campaign</span>
+</div>
+<div class="flex-1 space-y-1">
+<h4 class="font-body-md text-body-md font-semibold text-on-surface leading-tight">Pengumpulan Tugas PKK</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Batas akhir 31 Juli 2026</p>
+</div>
+<div class="bg-error/15 text-error border border-error/30 px-2 py-1 rounded-md text-center shrink-0">
+<span class="block font-headline-sm text-headline-sm leading-none">26</span>
+<span class="block font-label-sm text-label-sm uppercase text-[8px]">JUL</span>
+</div>
+</div>
+</section>
+</div>
+</main>
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-2 pb-safe bg-surface/60 backdrop-blur-md z-50 rounded-t-xl border-t border-outline-variant shadow-lg md:hidden"><!-- Beranda (Active) -->
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim font-bold scale-110 hover:text-primary dark:hover:text-primary transition-all w-16 Active: scale-90 transition-transform duration-150 relative" href="#">
+<div class="absolute inset-0 bg-secondary/10 rounded-full blur-md -z-10"></div>
+<img src="https://img.icons8.com/fluency/48/home.png" alt="Beranda" class="w-8 h-8 mb-1">
+<span class="text-label-sm font-label-sm">Beranda</span>
+</a>
+<!-- CBT -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-70 hover:text-primary dark:hover:text-primary transition-all w-16" href="#">
+<img src="https://img.icons8.com/fluency/48/test-passed.png" alt="CBT" class="w-8 h-8 mb-1">
+<span class="text-label-sm font-label-sm">CBT</span>
+</a>
+<!-- Materi -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-70 hover:text-primary dark:hover:text-primary transition-all w-16" href="#">
+<img src="https://img.icons8.com/fluency/48/book.png" alt="Materi" class="w-8 h-8 mb-1">
+<span class="text-label-sm font-label-sm">Materi</span>
+</a>
+<!-- Presensi -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-70 hover:text-primary dark:hover:text-primary transition-all w-16" href="#">
+<img src="https://img.icons8.com/fluency/48/calendar.png" alt="Presensi" class="w-8 h-8 mb-1">
+<span class="text-label-sm font-label-sm">Presensi</span>
+</a>
+<!-- Nilai -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-70 hover:text-primary dark:hover:text-primary transition-all w-16" href="#">
+<img src="https://img.icons8.com/fluency/48/star.png" alt="Nilai" class="w-8 h-8 mb-1">
+<span class="text-label-sm font-label-sm">Nilai</span>
+</a>
+<!-- Profil -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-70 hover:text-primary dark:hover:text-primary transition-all w-16" href="#">
+<img src="https://img.icons8.com/fluency/48/user-male-circle.png" alt="Profil" class="w-8 h-8 mb-1">
+<span class="text-label-sm font-label-sm">Profil</span>
+</a></nav>
+<nav class="hidden md:flex fixed top-0 right-0 h-full w-20 bg-surface/80 backdrop-blur-md border-l border-outline-variant shadow-lg flex-col items-center py-xl gap-lg z-40 pt-24">
+<button class="flex flex-col items-center justify-center text-secondary font-bold scale-110 transition-transform duration-150 w-full relative group">
+<div class="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 bg-secondary rounded-r-full"></div>
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-sm text-[10px] leading-none">Beranda</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant opacity-70 hover:text-primary hover:opacity-100 transition-all w-full">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">quiz</span>
+<span class="font-label-sm text-[10px] leading-none">CBT</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant opacity-70 hover:text-primary hover:opacity-100 transition-all w-full">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">menu_book</span>
+<span class="font-label-sm text-[10px] leading-none">Materi</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant opacity-70 hover:text-primary hover:opacity-100 transition-all w-full">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">calendar_today</span>
+<span class="font-label-sm text-[10px] leading-none">Presensi</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant opacity-70 hover:text-primary hover:opacity-100 transition-all w-full">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">grade</span>
+<span class="font-label-sm text-[10px] leading-none">Nilai</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant opacity-70 hover:text-primary hover:opacity-100 transition-all w-full">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">person</span>
+<span class="font-label-sm text-[10px] leading-none">Profil</span>
+</button>
+</nav>
+
+
+</body></html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>E-ACCESS - Profil</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#ffeedd",
+                        "on-background": "#dae2fd",
+                        "surface-variant": "#2d3449",
+                        "on-error": "#690005",
+                        "surface-container-high": "#222a3d",
+                        "outline": "#8d90a0",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "secondary-fixed-dim": "#4edea3",
+                        "on-tertiary-fixed": "#2a1700",
+                        "surface-bright": "#31394d",
+                        "on-surface": "#dae2fd",
+                        "surface-container-low": "#131b2e",
+                        "primary-container": "#2563eb",
+                        "surface-container-highest": "#2d3449",
+                        "outline-variant": "#434655",
+                        "on-secondary-fixed-variant": "#005236",
+                        "secondary-fixed": "#6ffbbe",
+                        "surface-container-lowest": "#060e20",
+                        "tertiary-fixed": "#ffddb8",
+                        "inverse-surface": "#dae2fd",
+                        "inverse-primary": "#0053db",
+                        "surface": "#0b1326",
+                        "inverse-on-surface": "#283044",
+                        "surface-container": "#171f33",
+                        "primary-fixed": "#dbe1ff",
+                        "tertiary-container": "#996100",
+                        "secondary": "#4edea3",
+                        "tertiary-fixed-dim": "#ffb95f",
+                        "on-secondary-fixed": "#002113",
+                        "on-primary-container": "#eeefff",
+                        "surface-dim": "#0b1326",
+                        "surface-tint": "#b4c5ff",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "error-container": "#93000a",
+                        "secondary-container": "#00a572",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "on-primary": "#002a78",
+                        "tertiary": "#ffb95f",
+                        "on-surface-variant": "#c3c6d7",
+                        "background": "#0b1326",
+                        "on-tertiary": "#472a00",
+                        "primary": "#b4c5ff",
+                        "on-primary-fixed": "#00174b",
+                        "on-secondary-container": "#00311f",
+                        "on-secondary": "#003824"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "xl": "32px",
+                        "container-margin": "16px",
+                        "gutter": "12px",
+                        "xs": "8px",
+                        "lg": "24px",
+                        "md": "16px",
+                        "sm": "12px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "label-sm": ["Manrope"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "label-md": ["Manrope"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "headline-sm": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-sm": ["10px", { "lineHeight": "14px", "fontWeight": "700" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["22px", { "lineHeight": "28px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #2d3449; border-radius: 10px; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex justify-center">
+<div class="w-full max-w-md bg-surface-dim relative shadow-2xl flex flex-col min-h-screen overflow-hidden border-x border-outline-variant/10">
+<!-- TopAppBar (Shared Component) -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/60 backdrop-blur-md border-b border-outline-variant/30 px-container-margin h-[64px] flex items-center gap-md">
+  <button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-highest transition-colors active:scale-95">
+    <span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+  </button>
+  <h1 class="text-headline-sm font-headline-sm text-on-surface">Profil Saya</h1>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 overflow-y-auto pt-[72px] pb-[90px] px-container-margin flex flex-col gap-lg">
+<!-- Profile Identity Card -->
+<section class="mt-md relative bg-surface-container/60 backdrop-blur-xl border-t border-outline-variant/40 border-l border-r border-b border-outline-variant/20 rounded-2xl p-lg flex flex-col items-center shadow-[0_8px_32px_rgba(0,0,0,0.4)] overflow-hidden group bg-gradient-to-br from-surface-container/80 to-primary/5">
+<!-- Decorative background glow -->
+<div class="absolute -top-12 -right-12 w-32 h-32 bg-primary/20 rounded-full blur-[40px] pointer-events-none"></div>
+<div class="relative mb-sm">
+<div class="w-24 h-24 rounded-full p-1 bg-gradient-to-tr from-primary to-secondary shadow-lg">
+<img alt="Modern 3D isometric illustration of a student avatar" class="w-full h-full rounded-full border-2 border-surface object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChkzpCYZUvowYFVjRjpXEp2RgqYILCKMa0D_Y_TKp9qlBz2JlmNOPLDbv1Y6DJctqULV6Sl2qPDVn-RMQrzJDjHQYKTHr8H_wxRy-D93zuUmbxPUYyIz22-v2w7wXCpYEcnhb8E8x_Nu-2tyy7Y68R5Ei2UOz7hjrXjjuv1YJ9gQNyd7Kze5ECJISNnhP4m5MJvvaECBHz8wpPoU6vK8KbsmvPDcl5jn3PmIjdU0CD3vMllGI6OPLK5w">
+</div>
+<div class="absolute bottom-0 right-0 bg-surface-container-high border border-outline-variant/50 rounded-full w-8 h-8 flex items-center justify-center shadow-md cursor-pointer hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined text-[16px] text-primary" data-icon="edit">edit</span>
+</div>
+</div>
+<div class="text-center flex flex-col items-center">
+<div class="flex items-center gap-2 mb-1">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold tracking-tight">Andi Pratama</h2>
+<span class="bg-secondary-container/20 border border-secondary/30 text-secondary font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1 shadow-sm bg-secondary/20">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+                            Aktif
+                        </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant/80">Kelas X TKJ 1 • NISN 0087654321</p>
+<div class="mt-sm bg-surface-container-low/80 border border-outline-variant/20 px-sm py-1.5 rounded-full flex items-center gap-xs shadow-inner">
+<span class="material-symbols-outlined text-[14px] text-tertiary" data-icon="school" style="font-variation-settings: 'FILL' 1;">school</span>
+<span class="font-label-md text-label-md text-on-surface-variant">SMK NEGERI 2 BALIKPAPAN</span>
+</div>
+</div>
+</section>
+<!-- Personal Information -->
+<section class="flex flex-col gap-sm">
+<h3 class="font-headline-sm text-headline-sm text-primary px-xs flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined text-[20px]" data-icon="person_book">person_book</span>
+                    Informasi Pribadi
+                </h3>
+<div class="bg-surface-container rounded-xl border border-outline-variant/20 shadow-md flex flex-col overflow-hidden">
+<div class="flex items-center p-md border-b border-outline-variant/10 hover:bg-surface-container-highest transition-colors group cursor-default">
+<div class="w-10 h-10 rounded-lg bg-surface flex items-center justify-center text-primary-fixed-dim group-hover:scale-110 transition-transform shadow-inner bg-surface-container-high">
+<span class="material-symbols-outlined" data-icon="calendar_month" style="color: rgb(37, 99, 235); font-variation-settings: &quot;FILL&quot; 1; filter: drop-shadow(rgba(37, 99, 235, 0.4) 0px 2px 4px);">calendar_month</span>
+</div>
+<div class="ml-sm flex-1">
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-0.5">Tempat, Tanggal Lahir</p>
+<p class="font-body-md text-body-md text-on-surface">Balikpapan, 12 Mei 2010</p>
+</div>
+</div>
+<div class="flex items-center p-md border-b border-outline-variant/10 hover:bg-surface-container-highest transition-colors group cursor-default">
+<div class="w-10 h-10 rounded-lg bg-surface flex items-center justify-center text-primary-fixed-dim group-hover:scale-110 transition-transform shadow-inner bg-surface-container-high">
+<span class="material-symbols-outlined" data-icon="wc" style="color: rgb(78, 222, 163); font-variation-settings: &quot;FILL&quot; 1; filter: drop-shadow(rgba(78, 222, 163, 0.4) 0px 2px 4px);">wc</span>
+</div>
+<div class="ml-sm flex-1">
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-0.5">Jenis Kelamin</p>
+<p class="font-body-md text-body-md text-on-surface">Laki-laki</p>
+</div>
+</div>
+<div class="flex items-start p-md border-b border-outline-variant/10 hover:bg-surface-container-highest transition-colors group cursor-default">
+<div class="w-10 h-10 rounded-lg bg-surface flex items-center justify-center text-primary-fixed-dim group-hover:scale-110 transition-transform shadow-inner shrink-0 bg-surface-container-high">
+<span class="material-symbols-outlined" data-icon="location_on" style="color: rgb(255, 185, 95); font-variation-settings: &quot;FILL&quot; 1; filter: drop-shadow(rgba(255, 185, 95, 0.4) 0px 2px 4px);">location_on</span>
+</div>
+<div class="ml-sm flex-1 pt-1">
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-0.5">Alamat</p>
+<p class="font-body-md text-body-md text-on-surface leading-snug">Jl. Jend. Sudirman No. 10<br>Balikpapan, Kalimantan Timur</p>
+</div>
+</div>
+<div class="flex items-center p-md border-b border-outline-variant/10 hover:bg-surface-container-highest transition-colors group cursor-pointer">
+<div class="w-10 h-10 rounded-lg bg-surface flex items-center justify-center text-primary-fixed-dim group-hover:scale-110 transition-transform shadow-inner bg-surface-container-high">
+<span class="material-symbols-outlined" data-icon="mail" style="color: rgb(37, 99, 235); font-variation-settings: &quot;FILL&quot; 1; filter: drop-shadow(rgba(37, 99, 235, 0.4) 0px 2px 4px);">mail</span>
+</div>
+<div class="ml-sm flex-1">
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-0.5">Email</p>
+<p class="font-body-md text-body-md text-on-surface truncate">andi.pratama@smkn2bpn.sch.id</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" data-icon="chevron_right" style="color: rgb(37, 99, 235); font-variation-settings: &quot;FILL&quot; 1; filter: drop-shadow(rgba(37, 99, 235, 0.4) 0px 2px 4px);">chevron_right</span>
+</div>
+<div class="flex items-center p-md hover:bg-surface-container-highest transition-colors group cursor-pointer">
+<div class="w-10 h-10 rounded-lg bg-surface flex items-center justify-center text-primary-fixed-dim group-hover:scale-110 transition-transform shadow-inner bg-surface-container-high">
+<span class="material-symbols-outlined" data-icon="smartphone" style="color: rgb(78, 222, 163); font-variation-settings: &quot;FILL&quot; 1; filter: drop-shadow(rgba(78, 222, 163, 0.4) 0px 2px 4px);">smartphone</span>
+</div>
+<div class="ml-sm flex-1">
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-0.5">No. Telepon</p>
+<p class="font-body-md text-body-md text-on-surface">0812-3456-7890</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" data-icon="chevron_right" style="color: rgb(78, 222, 163); font-variation-settings: &quot;FILL&quot; 1; filter: drop-shadow(rgba(78, 222, 163, 0.4) 0px 2px 4px);">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Account Settings -->
+<section class="flex flex-col gap-sm">
+<h3 class="font-headline-sm text-headline-sm text-primary px-xs flex items-center gap-2 text-tertiary">
+<span class="material-symbols-outlined text-[20px]" data-icon="settings">settings</span>
+                    Pengaturan Akun
+                </h3>
+<div class="bg-surface-container rounded-xl border border-outline-variant/20 shadow-md flex flex-col overflow-hidden">
+<div class="flex items-center justify-between p-md border-b border-outline-variant/10 hover:bg-surface-container-highest transition-colors group cursor-pointer">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="lock" style="color: rgb(255, 185, 95); font-variation-settings: &quot;FILL&quot; 1; filter: drop-shadow(rgba(255, 185, 95, 0.4) 0px 2px 4px);">lock</span>
+<span class="font-body-md text-body-md text-on-surface">Ubah Password</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" data-icon="chevron_right" style="color: #ffb95f; font-variation-settings: 'FILL' 1;">chevron_right</span>
+</div>
+<div class="flex items-center justify-between p-md border-b border-outline-variant/10 hover:bg-surface-container-highest transition-colors group cursor-pointer">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="notifications_active" style="color: #2563eb; font-variation-settings: 'FILL' 1;">notifications_active</span>
+<span class="font-body-md text-body-md text-on-surface">Notifikasi</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-secondary">Aktif</span>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-md border-b border-outline-variant/10 hover:bg-surface-container-highest transition-colors group cursor-pointer">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="language" style="color: #4edea3; font-variation-settings: 'FILL' 1;">language</span>
+<span class="font-body-md text-body-md text-on-surface">Bahasa</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface-variant">Indonesia</span>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-md border-b border-outline-variant/10 hover:bg-surface-container-highest transition-colors group cursor-pointer">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="info" style="color: #ffb95f; font-variation-settings: 'FILL' 1;">info</span>
+<span class="font-body-md text-body-md text-on-surface">Tentang Aplikasi</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" data-icon="chevron_right" style="color: #ffb95f; font-variation-settings: 'FILL' 1;">chevron_right</span>
+</div>
+<div class="flex items-center justify-between p-md hover:bg-surface-container-highest transition-colors group cursor-pointer">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="help" style="color: #2563eb; font-variation-settings: 'FILL' 1;">help</span>
+<span class="font-body-md text-body-md text-on-surface">Bantuan &amp; Panduan</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" data-icon="chevron_right" style="color: #2563eb; font-variation-settings: 'FILL' 1;">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Logout Button -->
+<button class="mt-xs w-full py-md rounded-xl font-label-md text-label-md font-bold flex items-center justify-center gap-2 border border-error/30 text-error hover:bg-error/10 hover:border-error/60 transition-all shadow-sm active:scale-[0.98] bg-error/5">
+<span class="material-symbols-outlined text-[20px]" data-icon="logout">logout</span>
+                Keluar Akun
+            </button>
+</main>
+<!-- BottomNavBar (Shared Component) -->
+<nav class="bg-surface/60 dark:bg-surface/60 backdrop-blur-md shadow-lg docked full-width bottom-0 z-50 rounded-t-xl border-t border-outline-variant dark:border-outline-variant fixed left-0 w-full flex justify-around items-center px-4 py-2 pb-safe md:hidden"><!-- Beranda -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-70 hover:text-primary dark:hover:text-primary transition-all w-16" href="#">
+<img src="https://img.icons8.com/fluency/48/home.png" alt="Home" class="w-8 h-8 mb-1">
+<span class="text-label-sm font-label-sm">Beranda</span>
+</a>
+<!-- CBT -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-70 hover:text-primary dark:hover:text-primary transition-all w-16" href="#">
+<img src="https://img.icons8.com/fluency/48/test-passed.png" alt="CBT" class="w-8 h-8 mb-1">
+<span class="text-label-sm font-label-sm">CBT</span>
+</a>
+<!-- Materi -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-70 hover:text-primary dark:hover:text-primary transition-all w-16" href="#">
+<img src="https://img.icons8.com/fluency/48/book.png" alt="Materi" class="w-8 h-8 mb-1">
+<span class="text-label-sm font-label-sm">Materi</span>
+</a>
+<!-- Presensi -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-70 hover:text-primary dark:hover:text-primary transition-all w-16" href="#">
+<img src="https://img.icons8.com/fluency/48/calendar.png" alt="Presensi" class="w-8 h-8 mb-1">
+<span class="text-label-sm font-label-sm">Presensi</span>
+</a>
+<!-- Nilai -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant opacity-70 hover:text-primary dark:hover:text-primary transition-all w-16" href="#">
+<img src="https://img.icons8.com/fluency/48/star.png" alt="Nilai" class="w-8 h-8 mb-1">
+<span class="text-label-sm font-label-sm">Nilai</span>
+</a>
+<!-- Profil (Active) -->
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim font-bold scale-110 hover:text-primary dark:hover:text-primary transition-all w-16 Active: scale-90 transition-transform duration-150 relative" href="#">
+<div class="absolute inset-0 bg-secondary/10 rounded-full blur-md -z-10"></div>
+<img src="https://img.icons8.com/fluency/48/user-male-circle.png" alt="Profil" class="w-8 h-8 mb-1">
+<span class="text-label-sm font-label-sm">Profil</span>
+</a></nav>
+</div>
+
+
+</body></html>
