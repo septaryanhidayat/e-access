@@ -21,6 +21,7 @@ class _MaterialDetailScreenState extends State<MaterialDetailScreen> {
   MaterialModel? _material;
   int _secondsSpent = 0;
   Timer? _trackerTimer;
+  bool _isCompleted = false;
 
   @override
   void initState() {
@@ -71,7 +72,11 @@ class _MaterialDetailScreenState extends State<MaterialDetailScreen> {
 
   void _startActivityTracker() {
     _trackerTimer = Timer.periodic(const Duration(seconds: 1), (timer) {
-      _secondsSpent++;
+      if (mounted) {
+        setState(() {
+          _secondsSpent++;
+        });
+      }
     });
   }
 
@@ -272,6 +277,29 @@ class _MaterialDetailScreenState extends State<MaterialDetailScreen> {
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                     ),
+                  const SizedBox(height: 16),
+                  OutlinedButton.icon(
+                    onPressed: () {
+                      setState(() {
+                        _isCompleted = !_isCompleted;
+                      });
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(content: Text(_isCompleted ? 'Materi ditandai Selesai Dibaca! 🎉' : 'Status pengerjaan diperbarui.')),
+                      );
+                    },
+                    icon: Icon(
+                      _isCompleted ? Icons.check_circle_rounded : Icons.check_circle_outline_rounded,
+                      color: _isCompleted ? const Color(0xFF4EDEAE) : Colors.white,
+                    ),
+                    label: Text(
+                      _isCompleted ? 'TANDAI BELUM SELESAI' : 'TANDAI SELESAI DIBACA',
+                      style: TextStyle(color: _isCompleted ? const Color(0xFF4EDEAE) : Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                    style: OutlinedButton.styleFrom(
+                      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                      side: BorderSide(color: _isCompleted ? const Color(0xFF4EDEAE) : const Color(0xFF334155)),
+                    ),
+                  ),
                 ],
               ),
             ),

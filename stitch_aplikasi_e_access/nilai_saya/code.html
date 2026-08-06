@@ -1,0 +1,285 @@
+<!DOCTYPE html><html class="dark" lang="id" style=""><svg class="inline-defs-container" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"></svg><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Nilai Saya - E-ACCESS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#ffeedd",
+                        "on-background": "#dae2fd",
+                        "surface-variant": "#2d3449",
+                        "on-error": "#690005",
+                        "surface-container-high": "#222a3d",
+                        "outline": "#8d90a0",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "secondary-fixed-dim": "#4edea3",
+                        "on-tertiary-fixed": "#2a1700",
+                        "surface-bright": "#31394d",
+                        "on-surface": "#dae2fd",
+                        "surface-container-low": "#131b2e",
+                        "primary-container": "#2563eb",
+                        "surface-container-highest": "#2d3449",
+                        "outline-variant": "#434655",
+                        "on-secondary-fixed-variant": "#005236",
+                        "secondary-fixed": "#6ffbbe",
+                        "surface-container-lowest": "#060e20",
+                        "tertiary-fixed": "#ffddb8",
+                        "inverse-surface": "#dae2fd",
+                        "inverse-primary": "#0053db",
+                        "surface": "#0b1326",
+                        "inverse-on-surface": "#283044",
+                        "surface-container": "#171f33",
+                        "primary-fixed": "#dbe1ff",
+                        "tertiary-container": "#996100",
+                        "secondary": "#4edea3",
+                        "tertiary-fixed-dim": "#ffb95f",
+                        "on-secondary-fixed": "#002113",
+                        "on-primary-container": "#eeefff",
+                        "surface-dim": "#0b1326",
+                        "surface-tint": "#b4c5ff",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "error-container": "#93000a",
+                        "secondary-container": "#00a572",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "on-primary": "#002a78",
+                        "tertiary": "#ffb95f",
+                        "on-surface-variant": "#c3c6d7",
+                        "background": "#0b1326",
+                        "on-tertiary": "#472a00",
+                        "primary": "#b4c5ff",
+                        "on-primary-fixed": "#00174b",
+                        "on-secondary-container": "#00311f",
+                        "on-secondary": "#003824"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "xl": "32px",
+                        "container-margin": "16px",
+                        "gutter": "12px",
+                        "xs": "8px",
+                        "lg": "24px",
+                        "md": "16px",
+                        "sm": "12px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "label-sm": ["Manrope"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "label-md": ["Manrope"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "headline-sm": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-sm": ["10px", { "lineHeight": "14px", "fontWeight": "700" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["22px", { "lineHeight": "28px", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0F172A; /* Deepest slate */
+            color: #dae2fd;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7); /* Surface color with opacity */
+            backdrop-filter: blur(12px);
+            border: 1px solid #334155;
+            box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.4);
+        }
+        .light-leak {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-body-md bg-background text-on-background antialiased pb-24 md:pb-0">
+<!-- Top App Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-md border-b border-outline-variant shadow-sm flex justify-between items-center px-container-margin py-xs max-w-full md:hidden">
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:bg-surface-container-highest transition-colors rounded-full p-2">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h1 class="text-headline-lg-mobile font-headline-lg-mobile text-primary-fixed-dim">Nilai Saya</h1>
+</div>
+<button class="text-on-surface-variant hover:bg-surface-container-highest transition-colors rounded-full p-2">
+<span class="material-symbols-outlined text-2xl">filter_alt</span>
+</button>
+</header>
+<!-- Web Navigation (Hidden on Mobile) -->
+<nav class="hidden md:flex fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-md border-b border-outline-variant shadow-sm justify-between items-center px-container-margin py-xs max-w-full">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden border border-outline-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">person</span>
+</div>
+<h1 class="text-headline-md font-headline-md font-bold text-primary">E-ACCESS</h1>
+</div>
+<div class="flex gap-8 items-center">
+<a class="text-on-surface-variant font-label-md hover:text-primary transition-colors flex flex-col items-center gap-1" href="#">
+<span class="material-symbols-outlined">home</span>
+                Beranda
+            </a>
+<a class="text-on-surface-variant font-label-md hover:text-primary transition-colors flex flex-col items-center gap-1" href="#">
+<span class="material-symbols-outlined">quiz</span>
+                CBT
+            </a>
+<a class="text-on-surface-variant font-label-md hover:text-primary transition-colors flex flex-col items-center gap-1" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+                Materi
+            </a>
+<a class="text-on-surface-variant font-label-md hover:text-primary transition-colors flex flex-col items-center gap-1" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+                Presensi
+            </a>
+<a class="text-primary font-bold font-label-md flex flex-col items-center gap-1 border-b-2 border-primary pb-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">grade</span>
+                Nilai
+            </a>
+<a class="text-on-surface-variant font-label-md hover:text-primary transition-colors flex flex-col items-center gap-1" href="#">
+<span class="material-symbols-outlined">person</span>
+                Profil
+            </a>
+</div>
+<button class="text-on-surface-variant hover:bg-surface-container-highest transition-colors rounded-full p-2">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+</button>
+</nav>
+<main class="pt-20 md:pt-24 px-container-margin max-w-4xl mx-auto space-y-6">
+<!-- Filters -->
+<div class="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+<button class="px-4 py-1.5 rounded-full bg-primary-container text-on-primary-container font-label-md whitespace-nowrap">Semua</button>
+<button class="px-4 py-1.5 rounded-full border border-outline-variant text-on-surface-variant font-label-md whitespace-nowrap hover:bg-surface-container-highest">Ujian</button>
+<button class="px-4 py-1.5 rounded-full border border-outline-variant text-on-surface-variant font-label-md whitespace-nowrap hover:bg-surface-container-highest">Tugas</button>
+<button class="px-4 py-1.5 rounded-full border border-outline-variant text-on-surface-variant font-label-md whitespace-nowrap hover:bg-surface-container-highest">Penilaian Harian</button>
+</div>
+<!-- Average Score Card -->
+<div class="glass-card rounded-xl p-md light-leak relative overflow-hidden bg-primary-container/20 shadow-lg"><div class="absolute -bottom-10 -left-10 w-32 h-32 bg-tertiary/20 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Decorative Glow -->
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/30 rounded-full blur-3xl pointer-events-none"><div class="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-secondary/10 opacity-50 blur-xl"></div><svg class="absolute inset-0 h-full w-full drop-shadow-[0_0_8px_rgba(78,222,163,0.5)]" preserveAspectRatio="none" viewBox="0 0 100 100"><defs><linearGradient id="chartGradient" x1="0%" x2="0%" y1="0%" y2="100%"><stop offset="0%" stop-color="#4edea3" stop-opacity="0.3"></stop><stop offset="100%" stop-color="#4edea3" stop-opacity="0"></stop></linearGradient></defs><path d="M0,100 L0,80 Q20,60 40,70 T80,40 T100,20 L100,100 Z" fill="url(#chartGradient)"></path><path class="text-secondary stroke-[3]" d="M0,80 Q20,60 40,70 T80,40 T100,20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path><circle class="text-secondary fill-surface" cx="0" cy="80" r="3" stroke="currentColor" stroke-width="2"></circle><circle class="text-secondary fill-surface" cx="20" cy="65" r="3" stroke="currentColor" stroke-width="2"></circle><circle class="text-secondary fill-surface" cx="40" cy="70" r="3" stroke="currentColor" stroke-width="2"></circle><circle class="text-secondary fill-surface" cx="60" cy="55" r="3" stroke="currentColor" stroke-width="2"></circle><circle class="text-secondary fill-surface" cx="80" cy="40" r="3" stroke="currentColor" stroke-width="2"></circle><circle class="text-secondary fill-surface" cx="100" cy="20" r="3" stroke="currentColor" stroke-width="2"></circle></svg><div class="absolute bottom-0 left-0 w-full flex justify-between text-label-sm text-on-surface-variant translate-y-full pt-2 px-1"><span class="">Feb</span><span class="">Mar</span><span class="">Apr</span><span class="">Mei</span><span class="">Jun</span><span class="">Jul</span></div><div class="absolute top-0 right-0 h-full flex flex-col justify-between text-label-sm text-on-surface-variant translate-x-full pl-2 py-1"><span class="">100</span><span class="">80</span><span class="">60</span></div></div>
+<div class="flex justify-between items-start mb-6">
+<div>
+<h2 class="text-headline-sm font-headline-sm text-on-background">Rata-rata Nilai</h2>
+<p class="text-body-md text-on-surface-variant">Dari Semua Ujian</p>
+</div>
+<div class="flex items-end gap-2">
+<span class="text-display-lg font-display-lg text-secondary drop-shadow-[0_0_10px_rgba(78,222,163,0.4)]">78,6</span>
+<span class="px-2 py-1 rounded bg-secondary text-on-secondary-container font-bold font-label-sm uppercase mb-2 shadow-sm">Baik</span>
+</div>
+</div>
+<!-- Chart Area (Placeholder for actual chart integration) -->
+<div class="h-40 w-full relative mt-4 border-b border-l border-outline-variant/30 pb-2 pl-2"><div class="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-secondary/10 opacity-50 blur-xl"></div><svg class="absolute inset-0 h-full w-full" preserveAspectRatio="none" viewBox="0 0 100 100"><defs><linearGradient id="bar-cyan" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#22d3ee"></stop><stop offset="100%" stop-color="#0891b2"></stop></linearGradient><linearGradient id="bar-purple" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#c084fc"></stop><stop offset="100%" stop-color="#9333ea"></stop></linearGradient><linearGradient id="bar-orange" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#fb923c"></stop><stop offset="100%" stop-color="#ea580c"></stop></linearGradient><linearGradient id="bar-green" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#4edea3"></stop><stop offset="100%" stop-color="#00a572"></stop></linearGradient><linearGradient id="bar-blue" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#60a5fa"></stop><stop offset="100%" stop-color="#2563eb"></stop></linearGradient></defs><rect x="5" y="40" width="10" height="60" rx="2" fill="url(#bar-cyan)" class="drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]"></rect><rect x="25" y="25" width="10" height="75" rx="2" fill="url(#bar-purple)" class="drop-shadow-[0_0_8px_rgba(192,132,252,0.5)]"></rect><rect x="45" y="50" width="10" height="50" rx="2" fill="url(#bar-orange)" class="drop-shadow-[0_0_8px_rgba(251,146,60,0.5)]"></rect><rect x="65" y="15" width="10" height="85" rx="2" fill="url(#bar-green)" class="drop-shadow-[0_0_8px_rgba(78,222,163,0.5)]"></rect><rect x="85" y="35" width="10" height="65" rx="2" fill="url(#bar-blue)" class="drop-shadow-[0_0_8px_rgba(96,165,250,0.5)]"></rect></svg><div class="absolute bottom-0 left-0 w-full flex justify-between text-label-sm text-on-surface-variant translate-y-full pt-2 px-1"><span class="">Feb</span><span class="">Mar</span><span class="">Apr</span><span class="">Mei</span><span class="">Jun</span><span class="">Jul</span></div><div class="absolute top-0 right-0 h-full flex flex-col justify-between text-label-sm text-on-surface-variant translate-x-full pl-2 py-1"><span class="">100</span><span class="">80</span><span class="">60</span></div></div>
+</div>
+<!-- Grades List -->
+<div>
+<h3 class="text-headline-sm font-headline-sm text-on-background mb-4">Daftar Nilai</h3>
+<div class="space-y-gutter">
+<!-- Grade Item 1 -->
+<div class="glass-card rounded-lg p-sm light-leak flex items-center justify-between hover:bg-surface-container-highest transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary group-hover:scale-105 transition-transform"><img src="https://lh3.googleusercontent.com/aida/AP1WRLvv1t0o0pn4vF31GYYzR8nZidUZU3D2gTMjPmsAC2WEIWcKRqMVCkDseNn6jdRsi30naJ3mP-LLJEA2W-VC77fKZxa06hYVzKwHtrtMJ1z_FIp3Dbse2rKiVkLdNQ9CNr0kH_HQGfzaHDbuK9OEwZJr6GrNoCqS6Ti2vATtceFA6PfStkIPaZLQBCREMEy9nWU8L6QtOQU0B9KZ-3bfLjHfEo9ySOHwNwJJBOS3x5hUGvvbqqmX-mAvjstO" alt="Trophy" class="w-8 h-8 object-contain"></div>
+<div>
+<h4 class="font-label-md text-on-background">Ujian Akhir Semester Ganjil</h4>
+<p class="text-label-sm text-on-surface-variant font-normal">Bahasa Indonesia</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-headline-md font-headline-md text-on-background">90</span>
+<span class="w-8 h-8 rounded flex items-center justify-center bg-secondary-container/20 text-secondary font-headline-sm font-bold">A</span>
+</div>
+</div>
+<!-- Grade Item 2 -->
+<div class="glass-card rounded-lg p-sm light-leak flex items-center justify-between hover:bg-surface-container-highest transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-tertiary-container/20 flex items-center justify-center text-tertiary group-hover:scale-105 transition-transform"><img src="https://img.icons8.com/fluency/48/help.png" alt="Quiz" class="w-8 h-8 object-contain"></div>
+<div>
+<h4 class="font-label-md text-on-background">Ulangan Harian - Teks Anekdot</h4>
+<p class="text-label-sm text-on-surface-variant font-normal">Bahasa Indonesia</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-headline-md font-headline-md text-on-background">80</span>
+<span class="w-8 h-8 rounded flex items-center justify-center bg-secondary-container/20 text-secondary font-headline-sm font-bold">B+</span>
+</div>
+</div>
+<!-- Grade Item 3 -->
+<div class="glass-card rounded-lg p-sm light-leak flex items-center justify-between hover:bg-surface-container-highest transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-tertiary-container/20 flex items-center justify-center text-tertiary group-hover:scale-105 transition-transform"><img src="https://img.icons8.com/fluency/48/book.png" alt="Book" class="w-8 h-8 object-contain"></div>
+<div>
+<h4 class="font-label-md text-on-background">Latihan Soal Hikayat</h4>
+<p class="text-label-sm text-on-surface-variant font-normal">Bahasa Indonesia</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-headline-md font-headline-md text-on-background">75</span>
+<span class="w-8 h-8 rounded flex items-center justify-center bg-tertiary-container/20 text-tertiary font-headline-sm font-bold">B</span>
+</div>
+</div>
+<!-- Grade Item 4 -->
+<div class="glass-card rounded-lg p-sm light-leak flex items-center justify-between hover:bg-surface-container-highest transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary group-hover:scale-105 transition-transform"><img src="https://img.icons8.com/fluency/48/document.png" alt="Task" class="w-8 h-8 object-contain"></div>
+<div>
+<h4 class="font-label-md text-on-background">Tugas - Teks Negosiasi</h4>
+<p class="text-label-sm text-on-surface-variant font-normal">Bahasa Indonesia</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-headline-md font-headline-md text-on-background">85</span>
+<span class="w-8 h-8 rounded flex items-center justify-center bg-secondary-container/20 text-secondary font-headline-sm font-bold">A-</span>
+</div>
+</div>
+<!-- Grade Item 5 -->
+<div class="glass-card rounded-lg p-sm light-leak flex items-center justify-between hover:bg-surface-container-highest transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-tertiary-container/20 flex items-center justify-center text-tertiary group-hover:scale-105 transition-transform"><img src="https://img.icons8.com/fluency/48/help.png" alt="Quiz" class="w-8 h-8 object-contain"></div>
+<div>
+<h4 class="font-label-md text-on-background">Ulangan Harian - Biografi</h4>
+<p class="text-label-sm text-on-surface-variant font-normal">Bahasa Indonesia</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-headline-md font-headline-md text-on-background">70</span>
+<span class="w-8 h-8 rounded flex items-center justify-center bg-tertiary-container/20 text-tertiary font-headline-sm font-bold">B-</span>
+</div>
+</div>
+</div>
+<button class="w-full mt-4 py-3 rounded-lg bg-primary-container hover:bg-primary-container/80 text-on-primary-container font-label-md transition-colors flex items-center justify-center gap-2">
+                Lihat Semua Nilai
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</main>
+<!-- Bottom Nav Bar (Mobile) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-2 pb-safe bg-surface/60 backdrop-blur-md border-t border-outline-variant shadow-lg z-50 rounded-t-xl md:hidden"><a class="flex flex-col items-center justify-center text-on-surface-variant opacity-80 hover:text-primary transition-all" href="#"><img src="https://img.icons8.com/fluency/48/home.png" alt="Home" class="w-8 h-8 drop-shadow-md"><span class="text-label-sm font-label-sm mt-1">Beranda</span></a><a class="flex flex-col items-center justify-center text-on-surface-variant opacity-80 hover:text-primary transition-all" href="#"><img src="https://img.icons8.com/fluency/48/test-passed.png" alt="CBT" class="w-8 h-8 drop-shadow-md"><span class="text-label-sm font-label-sm mt-1">CBT</span></a><a class="flex flex-col items-center justify-center text-on-surface-variant opacity-80 hover:text-primary transition-all" href="#"><img src="https://img.icons8.com/fluency/48/book.png" alt="Materi" class="w-8 h-8 drop-shadow-md"><span class="text-label-sm font-label-sm mt-1">Materi</span></a><a class="flex flex-col items-center justify-center text-on-surface-variant opacity-80 hover:text-primary transition-all" href="#"><img src="https://img.icons8.com/fluency/48/calendar.png" alt="Presensi" class="w-8 h-8 drop-shadow-md"><span class="text-label-sm font-label-sm mt-1">Presensi</span></a><a class="flex flex-col items-center justify-center text-primary font-bold scale-110 transition-transform duration-150" href="#"><img src="https://img.icons8.com/fluency/48/star.png" alt="Nilai" class="w-8 h-8 drop-shadow-lg"><span class="text-label-sm font-label-sm mt-1">Nilai</span></a><a class="flex flex-col items-center justify-center text-on-surface-variant opacity-80 hover:text-primary transition-all" href="#"><img src="https://img.icons8.com/fluency/48/user-male-circle.png" alt="Profil" class="w-8 h-8 drop-shadow-md"><span class="text-label-sm font-label-sm mt-1">Profil</span></a></nav>
+
+
+</body></html>
