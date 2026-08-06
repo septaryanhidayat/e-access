@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:go_router/go_router.dart';
 import '../constants/app_colors.dart';
 import '../../features/auth/presentation/providers/auth_provider.dart';
 
@@ -217,7 +218,11 @@ class AppSidebar extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 2),
       child: InkWell(
         onTap: () {
-          if (onSelectRoute != null) onSelectRoute!(route);
+          if (onSelectRoute != null) {
+            onSelectRoute!(route);
+          } else {
+            context.go(route);
+          }
         },
         borderRadius: BorderRadius.circular(8),
         child: Container(
