@@ -10,39 +10,107 @@ class AppTheme {
       primaryColor: AppColors.electricBlue,
       colorScheme: const ColorScheme.dark(
         primary: AppColors.electricBlue,
-        surface: AppColors.backgroundCard,
+        surface: AppColors.backgroundCardDark,
         error: AppColors.error,
       ),
+      appBarTheme: const AppBarTheme(
+        backgroundColor: AppColors.backgroundCardDark,
+        elevation: 0,
+        centerTitle: false,
+        iconTheme: IconThemeData(color: AppColors.textPrimaryDark),
+        titleTextStyle: TextStyle(
+          color: AppColors.textPrimaryDark,
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
       textTheme: GoogleFonts.interTextTheme(ThemeData.dark().textTheme).copyWith(
-        bodyLarge: GoogleFonts.inter(color: AppColors.textPrimary),
-        bodyMedium: GoogleFonts.inter(color: AppColors.textSecondary),
+        bodyLarge: GoogleFonts.inter(color: AppColors.textPrimaryDark),
+        bodyMedium: GoogleFonts.inter(color: AppColors.textSecondaryDark),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.electricBlue,
           foregroundColor: AppColors.backgroundDark,
+          elevation: 2,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8),
+            borderRadius: BorderRadius.circular(10),
           ),
           textStyle: const TextStyle(fontWeight: FontWeight.bold),
         ),
       ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        fillColor: AppColors.backgroundCard,
+        fillColor: AppColors.backgroundCardDark,
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8),
-          borderSide: const BorderSide(color: AppColors.border),
+          borderRadius: BorderRadius.circular(10),
+          borderSide: const BorderSide(color: AppColors.borderDark),
         ),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8),
-          borderSide: const BorderSide(color: AppColors.border),
+          borderRadius: BorderRadius.circular(10),
+          borderSide: const BorderSide(color: AppColors.borderDark),
         ),
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8),
-          borderSide: const BorderSide(color: AppColors.electricBlue),
+          borderRadius: BorderRadius.circular(10),
+          borderSide: const BorderSide(color: AppColors.electricBlue, width: 1.5),
         ),
-        hintStyle: const TextStyle(color: AppColors.textSecondary),
+        hintStyle: const TextStyle(color: AppColors.textSecondaryDark),
+      ),
+    );
+  }
+
+  static ThemeData get lightTheme {
+    return ThemeData(
+      brightness: Brightness.light,
+      scaffoldBackgroundColor: AppColors.backgroundLight,
+      primaryColor: AppColors.electricBlueLight,
+      colorScheme: const ColorScheme.light(
+        primary: AppColors.electricBlueLight,
+        surface: AppColors.backgroundCardLight,
+        error: AppColors.error,
+      ),
+      appBarTheme: const AppBarTheme(
+        backgroundColor: AppColors.backgroundCardLight,
+        elevation: 1,
+        centerTitle: false,
+        iconTheme: IconThemeData(color: AppColors.textPrimaryLight),
+        titleTextStyle: TextStyle(
+          color: AppColors.textPrimaryLight,
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      textTheme: GoogleFonts.interTextTheme(ThemeData.light().textTheme).copyWith(
+        bodyLarge: GoogleFonts.inter(color: AppColors.textPrimaryLight),
+        bodyMedium: GoogleFonts.inter(color: AppColors.textSecondaryLight),
+      ),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: AppColors.electricBlueLight,
+          foregroundColor: Colors.white,
+          elevation: 2,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
+          textStyle: const TextStyle(fontWeight: FontWeight.bold),
+        ),
+      ),
+      inputDecorationTheme: InputDecorationTheme(
+        filled: true,
+        fillColor: AppColors.backgroundCardLight,
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10),
+          borderSide: const BorderSide(color: AppColors.borderLight),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10),
+          borderSide: const BorderSide(color: AppColors.borderLight),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10),
+          borderSide: const BorderSide(color: AppColors.electricBlueLight, width: 1.5),
+        ),
+        hintStyle: const TextStyle(color: AppColors.textSecondaryLight),
       ),
     );
   }

@@ -35,13 +35,15 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     final authStatus = context.watch<AuthProvider>().status;
     final errorMessage = context.watch<AuthProvider>().errorMessage;
+    final authProvider = context.read<AuthProvider>();
 
     return Scaffold(
+      backgroundColor: AppColors.backgroundDark,
       body: Center(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(24.0),
           child: Container(
-            constraints: const BoxConstraints(maxWidth: 400),
+            constraints: const BoxConstraints(maxWidth: 420),
             padding: const EdgeInsets.all(32.0),
             decoration: BoxDecoration(
               color: AppColors.backgroundCard,
@@ -107,7 +109,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       labelText: 'Email',
                       prefixIcon: Icon(Icons.person_outline),
                     ),
-                    validator: (value) => value!.isEmpty ? 'Email wajib diisi' : null,
                   ),
                   const SizedBox(height: 16),
                   TextFormField(
@@ -117,9 +118,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       labelText: 'Password',
                       prefixIcon: Icon(Icons.lock_outline),
                     ),
-                    validator: (value) => value!.isEmpty ? 'Password wajib diisi' : null,
                   ),
-                  const SizedBox(height: 32),
+                  const SizedBox(height: 24),
                   ElevatedButton(
                     onPressed: authStatus == AuthStatus.loading ? null : _handleLogin,
                     style: ElevatedButton.styleFrom(
@@ -135,6 +135,59 @@ class _LoginScreenState extends State<LoginScreen> {
                             )
                           )
                         : const Text('MASUK', style: TextStyle(fontSize: 16)),
+                  ),
+                  const SizedBox(height: 24),
+                  const Divider(color: AppColors.border),
+                  const SizedBox(height: 12),
+                  const Text(
+                    'PREVIEW MODE (KLIK LANGSUNG ROLE):',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 11,
+                      color: AppColors.electricBlue,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1,
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: OutlinedButton(
+                          onPressed: () => authProvider.setDemoRole('Siswa'),
+                          style: OutlinedButton.styleFrom(
+                            side: const BorderSide(color: AppColors.electricBlue),
+                            foregroundColor: AppColors.electricBlue,
+                            padding: const EdgeInsets.symmetric(vertical: 10),
+                          ),
+                          child: const Text('SISWA', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: OutlinedButton(
+                          onPressed: () => authProvider.setDemoRole('Guru'),
+                          style: OutlinedButton.styleFrom(
+                            side: const BorderSide(color: Color(0xFFF59E0B)),
+                            foregroundColor: const Color(0xFFF59E0B),
+                            padding: const EdgeInsets.symmetric(vertical: 10),
+                          ),
+                          child: const Text('GURU', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: OutlinedButton(
+                          onPressed: () => authProvider.setDemoRole('Admin'),
+                          style: OutlinedButton.styleFrom(
+                            side: const BorderSide(color: Color(0xFF10B981)),
+                            foregroundColor: const Color(0xFF10B981),
+                            padding: const EdgeInsets.symmetric(vertical: 10),
+                          ),
+                          child: const Text('ADMIN', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),

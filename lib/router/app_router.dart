@@ -4,6 +4,8 @@ import '../features/auth/presentation/providers/auth_provider.dart';
 import '../features/dashboard/presentation/screens/dashboard_admin_screen.dart';
 import '../features/dashboard/presentation/screens/dashboard_guru_screen.dart';
 import '../features/dashboard/presentation/screens/dashboard_siswa_screen.dart';
+import '../features/cbt/presentation/screens/cbt_exam_screen.dart';
+import '../features/materials/presentation/screens/material_detail_screen.dart';
 
 class AppRouter {
   static GoRouter createRouter(AuthProvider authProvider) {
@@ -49,6 +51,20 @@ class AppRouter {
         GoRoute(
           path: '/dashboard_siswa',
           builder: (context, state) => const DashboardSiswaScreen(),
+        ),
+        GoRoute(
+          path: '/cbt_exam/:examId',
+          builder: (context, state) {
+            final examId = state.pathParameters['examId'] ?? 'demo_exam';
+            return CbtExamScreen(examId: examId);
+          },
+        ),
+        GoRoute(
+          path: '/material_detail/:materialId',
+          builder: (context, state) {
+            final materialId = state.pathParameters['materialId'] ?? 'demo_mat';
+            return MaterialDetailScreen(materialId: materialId);
+          },
         ),
       ],
     );
